@@ -1,0 +1,45 @@
+server:
+   port: 8586
+   
+spring:
+   application:
+      name: productms
+      
+   datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/productdb
+      
+      username: root
+      password: scooby
+      
+   jpa:
+      hibernate: 
+         ddl-auto: create
+         
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect     
+          
+  
+          
+   cloud:
+     consul:
+       host: localhost       
+       
+       discovery: 
+         hostname: localhost
+         health-check-path: /actuator/health
+         health-check-interval: 30s
+         prefer-ip-address: true
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+       
