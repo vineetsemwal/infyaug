@@ -2,7 +2,11 @@ package com.trainingapps.saleapp.customerms.dto;
 
 import java.util.List;
 import java.util.Set;
-
+/**
+ * 
+ * Response DTO
+ * 
+ */
 public class CustomerDetails {
 	private Long id;
 
