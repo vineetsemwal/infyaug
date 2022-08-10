@@ -1,0 +1,35 @@
+
+
+server:
+   port: 8989
+   
+spring:
+   application:
+      name: canvasapp
+      
+   
+   cloud:
+     consul:
+       host: localhost       
+       
+       
+       config:
+        fail-fast: false
+        enabled: true
+        prefix: config
+        #defaultContext: application
+        data-key: data
+        profileSeparator: '::'
+        format: YAML
+      
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+       
