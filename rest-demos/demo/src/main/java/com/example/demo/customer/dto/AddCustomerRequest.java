@@ -1,5 +1,9 @@
 package com.example.demo.customer.dto;
 
+import javax.validation.constraints.NotBlank;
+
+import org.hibernate.validator.constraints.Length;
+
 /**
  * 
  * request DTO for registering customer
@@ -7,7 +11,8 @@ package com.example.demo.customer.dto;
  */
 
 public class AddCustomerRequest {
-	
+	@Length(min=3,max=20)
+	@NotBlank
 	private String name;
 
 	public String getName() {

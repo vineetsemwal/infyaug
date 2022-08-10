@@ -1,0 +1,11 @@
+Http Status Code
+2XX : request prcessing is successful
+For eg. 200 :Ok
+
+4XX : For Client side error, client has made the err
+Foreg. 404 : Resource not found , client providing wrong url
+405 : Client is providing wrong request method
+
+5XX : This error is because of server side issues
+Foeg. 500 : Internal server err
+503: service is not available

@@ -2,9 +2,14 @@ package com.example.demo.customer.dao;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
+
+import org.springframework.stereotype.Repository;
 
 import com.example.demo.customer.entity.Customer;
 
+
+@Repository
 public class CustomerDaoImpl implements ICustomerDao{
 
 	private Map<Long, Customer>store=new HashMap<>();
@@ -17,9 +22,16 @@ public class CustomerDaoImpl implements ICustomerDao{
 	}
 
 	@Override
-	public Customer findById(long id) {
+	public Optional<Customer> findById(long id) {
 		Customer customer=store.get(id);
-		return customer;
+		if(customer==null) {
+		Optional<Customer> optional=Optional.empty();
+	    return optional; 
+		}
+		Optional<Customer>optional=Optional.of(customer);
+		return optional;
+		
+		
 	}
 	
 
