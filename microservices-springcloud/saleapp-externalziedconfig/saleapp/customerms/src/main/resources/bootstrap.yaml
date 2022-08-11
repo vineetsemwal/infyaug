@@ -1,0 +1,43 @@
+server:
+   port: 8587
+   
+product:
+  baseUrl: http://productms
+  
+  
+spring:
+   application:
+      name: customerms
+      
+    
+          
+   cloud:
+     consul:
+       host: localhost       
+       
+       config:
+        fail-fast: false
+        enabled: true
+        prefix: config
+        #defaultContext: application
+        data-key: data
+        profileSeparator: '::'
+        format: YAML
+       
+       discovery: 
+         hostname: localhost
+         health-check-path: /actuator/health
+         health-check-interval: 30s
+         prefer-ip-address: true
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+       
